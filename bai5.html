@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Bài 5: Cho người dùng nhập vào chuỗi kí tự. 
+        Viết hàm kiểm tra xem tần suất xuất hiện của mỗi ký tự và in ra chúng
+Input: “Hello World”
+  -->
+  <script>
+   
+        function kiemTraTanSuat(array){
+            let count = 0;
+            for (let i = 0; i < array.length; i++) {
+                count = 0;
+                for(let j = i; j< array.length; j++){
+                    if(array[i] == array[j]){
+                        count++;
+                        if(j>i){
+                            array.splice(j, 1);
+                            j--;
+                        }
+                    }
+                }
+                console.log(`Ký tự ${array[i]} xuất hiện ${count} lần`);
+            }
+        }
+        let inputS = prompt("Nhập vào chuỗi kí tự:");
+        inputA = inputS.split("");
+        kiemTraTanSuat(inputA);
+  </script>
+</body>
+</html>

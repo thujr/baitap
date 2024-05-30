@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* Bài 1: Viết chương trình cho người dùng nhập vào 3 số, 
+        viết hàm kiểm tra để tìm ra số bé nhất và in ra số đó */
+      function minArray(arr) {
+        let min = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] < min) {
+            min = arr[i];
+          }
+        }
+        return min;
+      }
+      let so1=prompt('Nhập số đầu tiên');
+      let so2=prompt('Nhập số thứ 2');
+      let so3=prompt('Nhập số thứ 3');
+      let ketQua=minArray([so1,so2,so3]);
+      console.log("Số bé nhất là số :" + ketQua);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. 
+        Thực thi hàm vừa khởi tạo -->
+    <script>
+      function timGiaiThua(so) {
+        if (so < 0 || !Number.isInteger(so)) {
+          return NaN;
+        }
+        if (so === 0 || so === 1) {
+          return 1;
+        }
+        let giaiThua = 1;
+        for (let i = 2; i <= so; i++) {
+          giaiThua *= i;
+        }
+        return giaiThua;
+      }
+      let so = parseInt(prompt("Nhập số nguyên vào đây:"));
+      let ketQua = timGiaiThua(so);
+      console.log("Giai thừa của số :" + so + "là" + ketQua);
+3
+      
+    </script>
+  </body>
+</html>

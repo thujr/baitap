@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Bài 4: Cho mảng sau:
+let arr=[1,2,3,4,5,6,7,8,9,10]
+Viết hàm trả về tất cả các cặp số có tổng bằng 10 -->
+    <script>
+      function tongBang10(arr) {
+        let b = [];
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] + arr[j] === 10) {
+              b.push(arr[i], arr[j]);
+            }
+          }
+        }
+        return b;
+      }
+      let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      let result = tongBang10(arr);
+      console.log("các cặp số có tổng = 10 :" + result);
+    </script>
+  </body>
+</html>
